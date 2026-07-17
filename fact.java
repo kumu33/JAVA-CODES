@@ -1,0 +1,16 @@
+public class Main
+{
+	public static void main(String[] args) {
+		int n=5;
+		int fact=factorial(1,n);
+		System.out.println("factorial="+fact);
+	}
+	static int factorial(int k,int y)
+	{
+	    if(y==1){
+	        return k;
+	    }
+	    k=k*y;
+	    return factorial(k,y-1);
+	}
+}
