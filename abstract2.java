@@ -1,0 +1,25 @@
+abstract class payment{
+    abstract void pay();
+    void receipt(){
+        System.out.println("receipt generated");
+    }
+}
+class UPI extends payment{
+    void pay(){
+        System.out.println("paid using UPI");
+    }
+}
+class card extends payment{
+    void pay(){
+        System.out.println("paid using card");
+    }
+}
+public class Main{
+    public static void main(String[]args){
+        UPI u=new UPI();
+        u.pay();
+        u.receipt();
+        card c=new card();
+        c.pay();
+    }
+}
